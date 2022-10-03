@@ -11,7 +11,7 @@ To deploy this project run
 ```bash
   ng serve --open
 ```
-
+[Live Demo](https://jolly-squirrel-9de287.netlify.app/)
 
 ## Screenshots
 

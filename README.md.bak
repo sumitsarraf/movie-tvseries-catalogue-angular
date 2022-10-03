@@ -18,4 +18,16 @@ To deploy this project run
 #### HomePage
 ![Playbox homepage](src/assets/images/1.png?raw=true)
 
+#### Movies
+![Playbox homepage](src/assets/images/2.png?raw=true)
+
+#### Tv Series
+![Playbox homepage](src/assets/images/3.png?raw=true)
+
+#### Search Movie or Tv Series
+![Playbox homepage](src/assets/images/4.png?raw=true)
+
+#### Genre
+![Playbox homepage](src/assets/images/5.png?raw=true)
+
 
