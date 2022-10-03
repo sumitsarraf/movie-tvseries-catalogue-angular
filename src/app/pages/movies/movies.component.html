@@ -1,0 +1,13 @@
+<div class="background"
+    style="background-image: url('https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,032541,01b4e4)/bcT8CaBIj086WVD7K529h78eujb.jpg');">
+<div class="container">
+  <div class="grid">
+    <div class="col-6 md:col-3 lg:col-3" *ngFor="let movie of movies">
+      <item [itemData]="movie"></item>
+    </div>
+  </div>
+  <div>
+    <p-paginator [rows]="20" [totalRecords]="10000" (onPageChange)="paginate($event)"></p-paginator>
+  </div>
+</div>
+</div>

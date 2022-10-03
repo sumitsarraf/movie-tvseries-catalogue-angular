@@ -1,0 +1,51 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+  
+  .example-container form {
+    margin-bottom: 20px;
+  }
+  
+  .example-container form > * {
+    margin: 5px 0;
+  }
+  
+  .example-container .mat-radio-button {
+    margin: 0 5px;
+  }
+  
+  .example-large-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+  }
+  
+  /* .example-large-box {
+    height: 300px;
+    width: 900px;
+  } */
+
+  .matChipClass{
+    position: absolute; 
+    display: flex; 
+    align-items: center; 
+    top: 85px; 
+    left: 183px; 
+    background-color: #212121; 
+    color: white; 
+    border-radius: 5px;
+  }
+
+
+  .searchBtn {
+    background-color: black;
+    color: white;
+  }

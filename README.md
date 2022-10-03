@@ -1,2 +1,20 @@
-# movie-tvseries-catalogue-angular
-A Web application with a catalog of movies and Tv series with search functionality of both, using an API from the themoviedb.org and the Angular 14, Angular material, etc.
+
+# Angular Movie catalog
+
+A website with a catalog of movies with differente categories, using an API from the themoviedb.org and the Angular framework.
+
+
+## Deployment
+
+To deploy this project run
+
+```bash
+  ng serve --open
+```
+
+
+## Screenshots
+
+
+
+

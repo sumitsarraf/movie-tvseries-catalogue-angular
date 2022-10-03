@@ -1,0 +1,21 @@
+<ng-container *ngIf="itemData">
+  <a class="movie-item" [routerLink]="'/movie/' + itemData.id">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div class="example-button-container">
+        <mat-chip-list aria-label="Fish selection">
+          <mat-chip style="position: absolute; display: flex; align-items: center; top: 85px; left: 183px; background-color: #212121; color: white; border-radius: 5px; "><mat-icon style="color: gold">star</mat-icon> {{ itemData.vote_average }}/10</mat-chip>
+        </mat-chip-list>
+      </div>
+      <mat-card-title style="height: 50px;">{{ itemData.title }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="imagesSizes.medium + itemData.poster_path" alt=""/>
+    <mat-card-actions>
+      <mat-chip-list aria-label="Fish selection">
+        <mat-chip>{{ itemData.release_date }}</mat-chip>
+      </mat-chip-list>
+    </mat-card-actions>
+  </mat-card>
+</a>
+</ng-container>
+   

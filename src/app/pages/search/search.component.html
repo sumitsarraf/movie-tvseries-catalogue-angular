@@ -1,0 +1,101 @@
+<mat-card>
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Movie Search">
+      <div class="example-large-box mat-elevation-z4" style="display: block; margin-left: auto; margin-right: auto; width: 40%;">
+        <form class="example-container" [formGroup]="options" style="width: -webkit-fill-available !important;">
+          <mat-form-field 
+              [hideRequiredMarker]="options.value.hideRequired"
+              [floatLabel]="options.value.floatLabel">
+            <input matInput formControlName="name" placeholder="Search Movie" required autocomplete="off">
+          </mat-form-field>
+      
+          <button class="searchBtn" type="submit" mat-raised-button (click)="searchMovies()">Search</button>
+        </form>
+      </div>
+
+
+      <mat-card class="example-card" style="max-width: -webkit-fill-available !important; background-image: url('https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,032541,01b4e4)/bcT8CaBIj086WVD7K529h78eujb.jpg');" *ngIf="showResult">
+        <mat-card-header>
+          <mat-card-title style="color: white">Search Results</mat-card-title>
+        </mat-card-header>
+      
+        <mat-card *ngIf="errorResult">No search result found.</mat-card>
+      
+      
+        <div class="container">
+          <div class="grid">
+            <div class="col-6 md:col-3 lg:col-3" *ngFor="let tv of moviesSearchResult">
+              <mat-card class="example-card">
+                <mat-card-header>
+                  <div class="example-button-container">
+                    <mat-chip-list aria-label="Fish selection">
+                      <mat-chip class="matChipClass" style=""><mat-icon style="color: gold">star</mat-icon> {{ tv.vote_average }}/10</mat-chip>
+                    </mat-chip-list>
+                  </div>
+                  <mat-card-title style="height: 50px;">{{ tv.title }}</mat-card-title>
+                </mat-card-header>
+                <img mat-card-image [src]="imagesSizes.medium + tv.poster_path" alt=""/>
+                <mat-card-actions>
+                  <mat-chip-list aria-label="Fish selection">
+                    <mat-chip>{{ tv.release_date }}</mat-chip>
+                  </mat-chip-list>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </mat-card>
+    </mat-tab>
+    <mat-tab label="Tv Series Search">
+      <div class="example-large-box mat-elevation-z4" style="display: block; margin-left: auto; margin-right: auto; width: 40%;">
+        <form class="example-container" [formGroup]="options" style="width: -webkit-fill-available !important;">
+          <mat-form-field 
+              [hideRequiredMarker]="options.value.hideRequired"
+              [floatLabel]="options.value.floatLabel">
+            <input matInput formControlName="name" placeholder="Search Tv Series" required>
+          </mat-form-field>
+          <button class="searchBtn" mat-raised-button type="submit" (click)="searchTvSeries()">Search</button>
+        </form>
+      </div>
+
+
+      <mat-card class="example-card" style="max-width: -webkit-fill-available !important; background-image: url('https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,032541,01b4e4)/bcT8CaBIj086WVD7K529h78eujb.jpg');" *ngIf="showResult">
+        <mat-card-header>
+          <mat-card-title style="color: white">Search Results</mat-card-title>
+        </mat-card-header>
+      
+        <mat-card *ngIf="errorResult">No search result found.</mat-card>
+      
+      
+        <div class="container">
+          <div class="grid">
+            <div class="col-6 md:col-3 lg:col-3" *ngFor="let tv of tvSearchResult">
+              <mat-card class="example-card">
+                <mat-card-header>
+                  <div class="example-button-container">
+                    <mat-chip-list aria-label="Fish selection">
+                      <mat-chip class="matChipClass" style=""><mat-icon style="color: gold">star</mat-icon> {{ tv.vote_average }}/10</mat-chip>
+                    </mat-chip-list>
+                  </div>
+                  <mat-card-title style="height: 50px;">{{ tv.name }}</mat-card-title>
+                </mat-card-header>
+                <img mat-card-image [src]="imagesSizes.medium + tv.poster_path" alt=""/>
+                <mat-card-actions>
+                  <mat-chip-list aria-label="Fish selection">
+                    <mat-chip>{{ tv.first_air_date }}</mat-chip>
+                  </mat-chip-list>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </mat-card>
+    </mat-tab>
+  </mat-tab-group>
+
+</mat-card>
+
+
+

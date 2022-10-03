@@ -1,0 +1,167 @@
+
+<mat-card class="example-card" style="max-width: fit-content !important; background-image: url('https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,032541,01b4e4)/bcT8CaBIj086WVD7K529h78eujb.jpg');">
+  <mat-card-header>
+    <mat-card-title style="color: white">Popular</mat-card-title>
+  </mat-card-header>
+
+  <div class="container">
+    <div class="grid">
+      <div class="col-6 md:col-3 lg:col-3" *ngFor="let tv of popularTvSeries">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div class="example-button-container">
+              <mat-chip-list aria-label="Fish selection">
+                <mat-chip style="position: absolute; display: flex; align-items: center; top: 85px; left: 183px; background-color: #212121; color: white; border-radius: 5px; "><mat-icon style="color: gold">star</mat-icon> {{ tv.vote_average }}/10</mat-chip>
+              </mat-chip-list>
+            </div>
+            <mat-card-title style="height: 50px;">{{ tv.name }}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image [src]="imagesSizes.medium + tv.poster_path" alt=""/>
+          <mat-card-actions>
+            <mat-chip-list aria-label="Fish selection">
+              <mat-chip>{{ tv.first_air_date }}</mat-chip>
+            </mat-chip-list>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    <div></div>
+  </div>
+</mat-card>
+
+<mat-card class="example-card" style="max-width: fit-content !important; background-image: url('https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,032541,01b4e4)/bcT8CaBIj086WVD7K529h78eujb.jpg'); margin-top: 2%;">
+  <mat-card-header>
+    <mat-card-title style="color: white">Top Rated</mat-card-title>
+  </mat-card-header>
+
+  <div class="container">
+    <div class="grid">
+      <div class="col-6 md:col-3 lg:col-3" *ngFor="let tv of topRatedTvSeries">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div class="example-button-container">
+              <mat-chip-list aria-label="Fish selection">
+                <mat-chip style="position: absolute; display: flex; align-items: center; top: 85px; left: 183px; background-color: #212121; color: white; border-radius: 5px; "><mat-icon style="color: gold">star</mat-icon> {{ tv.vote_average }}/10</mat-chip>
+              </mat-chip-list>
+            </div>
+            <mat-card-title style="height: 50px;">{{ tv.name }}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image [src]="imagesSizes.medium + tv.poster_path" alt=""/>
+          <mat-card-actions>
+            <mat-chip-list aria-label="Fish selection">
+              <mat-chip>{{ tv.first_air_date }}</mat-chip>
+            </mat-chip-list>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    <div></div>
+  </div>
+</mat-card>
+
+<mat-card class="example-card" style="max-width: fit-content !important; background-image: url('https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,032541,01b4e4)/bcT8CaBIj086WVD7K529h78eujb.jpg'); margin-top: 2%;">
+  <mat-card-header>
+    <mat-card-title style="color: white">Releasing Today</mat-card-title>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <div class="container">
+    <div class="grid">
+      <div class="col-6 md:col-3 lg:col-3" *ngFor="let tv of releasingTodayTvSeries">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div class="example-button-container">
+              <mat-chip-list aria-label="Fish selection">
+                <mat-chip style="position: absolute; display: flex; align-items: center; top: 85px; left: 183px; background-color: #212121; color: white; border-radius: 5px; "><mat-icon style="color: gold">star</mat-icon> {{ tv.vote_average }}/10</mat-chip>
+              </mat-chip-list>
+            </div>
+            <mat-card-title style="height: 50px;">{{ tv.name }}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image [src]="imagesSizes.medium + tv.poster_path" alt=""/>
+          <mat-card-actions>
+            <mat-chip-list aria-label="Fish selection">
+              <mat-chip>{{ tv.first_air_date }}</mat-chip>
+            </mat-chip-list>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    <div></div>
+  </div>
+</mat-card>
+
+<!-- <mat-card
+  class="example-card"
+  style="max-width: fit-content !important; background: #d62246 !important;
+  margin-top: 1%">
+  <mat-card-header>
+    <mat-card-title>Top Rated</mat-card-title>
+  </mat-card-header>
+  <div class="container">
+    <div class="grid">
+      <div class="col-6 md:col-3 lg:col-3" *ngFor="let tv of topRatedTvSeries">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar>
+              <div class="example-button-container">
+                <button mat-mini-fab color="warn" aria-label="Example icon
+                  button with a filter list icon">
+                  {{ tv.vote_average }}
+                </button>
+              </div>
+            </div>
+
+            <mat-card-title>{{ tv.name }}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image [src]="imagesSizes.medium + tv.poster_path" alt=""
+            />
+
+          <mat-card-actions>
+            <mat-chip-list aria-label="Fish selection">
+              <mat-chip>{{ tv.first_air_date }}</mat-chip>
+            </mat-chip-list>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    <div></div>
+  </div>
+</mat-card> -->
+
+<!-- <mat-card
+  class="example-card"
+  style="max-width: fit-content !important; background: #d62246 !important;
+  margin-top: 1%">
+  <mat-card-header>
+    <mat-card-title>Releasing Today</mat-card-title>
+  </mat-card-header>
+  <div class="container">
+    <div class="grid">
+      <div class="col-6 md:col-3 lg:col-3" *ngFor="let tv of
+        releasingTodayTvSeries">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar>
+              <div class="example-button-container">
+                <button mat-mini-fab color="warn" aria-label="Example icon
+                  button with a filter list icon">
+                  {{ tv.vote_average }}
+                </button>
+              </div>
+            </div>
+
+            <mat-card-title>{{ tv.name }}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image [src]="imagesSizes.medium + tv.poster_path" alt=""
+            />
+
+          <mat-card-actions>
+            <mat-chip-list aria-label="Fish selection">
+              <mat-chip>{{ tv.first_air_date }}</mat-chip>
+            </mat-chip-list>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    <div></div>
+  </div>
+</mat-card> -->

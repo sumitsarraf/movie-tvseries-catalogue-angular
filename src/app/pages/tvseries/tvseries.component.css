@@ -1,0 +1,14 @@
+.example-card {
+    max-width: 400px;
+  }
+
+  .mat-card-avatar {
+    margin-bottom: 10px;
+}
+  
+ 
+  
+.app-icon {
+  margin-right: 5px;
+  color: #d4af37;
+}
